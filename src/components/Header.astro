@@ -71,16 +71,16 @@
   const toggleButton = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
 
-  toggleButton.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
+  toggleButton?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
   });
 
   // Cierra el menú si se redimensiona a un tamaño de escritorio (lg)
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024) {
       // 1024px es el breakpoint 'lg' de Tailwind
-      menu.classList.remove("hidden");
-    } else if (!menu.classList.contains("hidden")) {
+      menu?.classList.remove("hidden");
+    } else if (!menu?.classList.contains("hidden")) {
       // Si el menú está abierto en móvil y la pantalla es menor a 1024px,
       // lo mantenemos visible, pero si queremos forzar el cierre,
       // podemos dejar solo el 'remove' en 1024.
