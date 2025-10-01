@@ -1,10 +1,7 @@
 <header
-  class="fixed top-0 left-0 w-full bg-white/85 backdrop-blur-sm z-50 flex justify-between items-center px-6 lg:px-16 py-4 shadow-sm"
+  class="fixed top-0 left-0 w-full bg-white/85 backdrop-blur-sm z-50 flex justify-between items-center px-6 lg:px-16 py-4 shadow-md"
 >
-  <span class="text-[#2a6efc] text-2xl font-extrabold font-sans"
-    >Vaccination</span
-  >
-
+  <span class="text-[#2a6efc] text-2xl font-extrabold">Vaccination</span>
   <button id="menu-toggle" class="lg:hidden text-gray-700 focus:outline-none">
     <svg
       class="h-7 w-7"
@@ -20,7 +17,6 @@
         d="M4 6h16M4 12h16m-7 6h7"></path>
     </svg>
   </button>
-
   <nav
     id="menu"
     class="hidden lg:block absolute lg:static top-full left-0 w-full lg:w-auto bg-white/95 lg:bg-transparent shadow-lg lg:shadow-none transition-all duration-300 ease-in-out"
@@ -28,62 +24,56 @@
     <ul class="flex flex-col lg:flex-row items-center lg:gap-12 p-4 lg:p-0">
       <li>
         <a
-          href="#"
+          href=""
           class="block py-2 text-gray-700 font-semibold hover:text-[#2a6efc] transition"
-          >Database</a
-        >
+          >Database
+        </a>
       </li>
       <li>
         <a
-          href="#"
+          href=""
           class="block py-2 text-gray-700 font-semibold hover:text-[#2a6efc] transition"
-          >Education</a
         >
+          Education
+        </a>
       </li>
       <li>
         <a
-          href="#"
+          href=""
           class="block py-2 text-gray-700 font-semibold hover:text-[#2a6efc] transition"
           >News</a
         >
       </li>
       <li>
         <a
-          href="#"
+          href=""
           class="block py-2 text-gray-700 font-semibold hover:text-[#2a6efc] transition"
           >Regulation</a
         >
       </li>
       <li class="mt-4 lg:mt-0">
         <a
-          href="#"
+          href=""
           class="bg-[#2a6efc] text-white font-semibold px-5 py-2 rounded-md shadow-lg hover:bg-[#1e54c7] transition"
+          >Hoax Buster</a
         >
-          Hoax Buster
-        </a>
       </li>
     </ul>
   </nav>
 </header>
 
 <script>
-  // El JavaScript debe ajustarse para usar el breakpoint 'lg' (1024px)
   const toggleButton = document.getElementById("menu-toggle");
   const menu = document.getElementById("menu");
 
-  toggleButton.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
+  toggleButton?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
   });
 
-  // Cierra el menú si se redimensiona a un tamaño de escritorio (lg)
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024) {
-      // 1024px es el breakpoint 'lg' de Tailwind
-      menu.classList.remove("hidden");
-    } else if (!menu.classList.contains("hidden")) {
-      // Si el menú está abierto en móvil y la pantalla es menor a 1024px,
-      // lo mantenemos visible, pero si queremos forzar el cierre,
-      // podemos dejar solo el 'remove' en 1024.
+      menu?.classList.remove("hidden");
+    } else if (!menu?.classList.contains("hidden")) {
     }
   });
 </script>
