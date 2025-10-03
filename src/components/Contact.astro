@@ -1,25 +1,27 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const contacts = [
   {
-    img: "/img/phone.png",
+    img: `${base}/img/phone.png`,
     method: "Call",
     number: "021.123.145.14",
     button: "Call Now",
   },
   {
-    img: "/img/chat.png",
+    img: `${base}/img/chat.png`,
     method: "Chat",
     number: "021.123.145.14",
     button: "Chat Now",
   },
   {
-    img: "/img/call.png",
+    img: `${base}/img/call.png`,
     method: "Video Call",
     number: "021.123.145.14",
     button: "Video Call Now",
   },
   {
-    img: "/img/mail.png",
+    img: `${base}/img/mail.png`,
     method: "Message",
     number: "021.123.145.14",
     button: "Message Now",
@@ -68,7 +70,7 @@ const contacts = [
     <!-- Imagen -->
     <div class="flex-1 flex justify-center md:justify-end">
       <img
-        src="/img/img2.jpg"
+        src={`${base}/img/img2.jpg`}
         alt="Enfermero"
         class="w-4/5 h-[600px] object-cover rounded-md"
       />

@@ -9,4 +9,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://yomidev.github.io",
+  base: "/Vacunacion",
 });
